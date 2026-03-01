@@ -49,6 +49,13 @@ It treats habits as systems, not motivation hacks, so small actions compound int
 - Node.js 20+
 - npm
 
+### Clone
+
+```bash
+git clone https://github.com/harsuism/habit-tracker.git
+cd habit-tracker
+```
+
 ### Install
 
 ```bash

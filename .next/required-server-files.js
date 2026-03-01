@@ -100,7 +100,7 @@ self.__SERVER_FILES_MANIFEST={
         "transform": "lodash/{{member}}"
       }
     },
-    "outputFileTracingRoot": "/Users/pennead/Documents/make-something",
+    "outputFileTracingRoot": "/Users/pennead/Documents/projects/habit-builder",
     "cacheComponents": false,
     "cacheLife": {
       "default": {
@@ -293,11 +293,11 @@ self.__SERVER_FILES_MANIFEST={
     "bundlePagesRouterDependencies": false,
     "configFileName": "next.config.ts",
     "turbopack": {
-      "root": "/Users/pennead/Documents/make-something"
+      "root": "/Users/pennead/Documents/projects/habit-builder"
     },
     "distDirRoot": ".next"
   },
-  "appDir": "/Users/pennead/Documents/make-something",
+  "appDir": "/Users/pennead/Documents/projects/habit-builder",
   "relativeAppDir": "",
   "files": [
     ".next/routes-manifest.json",

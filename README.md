@@ -1,71 +1,68 @@
-# make something
+# One Percent Better — Atomic Habits Tracker
 
-build your first app with ai. no coding experience needed. seriously.
+*build identity-driven habits one small vote at a time.*
 
-## what is this?
+## 🧠 About
 
-this is the starter repo for **make something** — a free, live tutorial where i show you how to build a real app using openai codex (an ai that writes code for you). you watch me build one from scratch, then you go build your own.
+Most habit trackers focus on streaks alone. **One Percent Better** is built around behavior science from *Atomic Habits*: identity-based habits, the Two-Minute Rule, Never Miss Twice recovery logic, and both the build + break versions of the Four Laws of Behavior Change.  
+The goal is not to check boxes, but to build a repeatable system you can actually stick with.
 
-this repo is what you'll use to build yours. it comes with everything pre-configured — a framework, a component library, styling, animations — so you can focus on your idea instead of setup. an ai agent lives inside it that helps you build, answers questions, and handles the code.
+## 📚 Philosophy
 
-you just need a laptop, a chatgpt account (free version works), and an idea. if you don't have an idea yet, no worries — the agent will help you think of one.
+This app is inspired by James Clear’s *Atomic Habits* framework: focus on identity first, make habits obvious/attractive/easy/satisfying, and recover quickly when you miss.  
+It treats habits as systems, not motivation hacks, so small actions compound into long-term change.
 
-## who this is for
+## ⚙️ How It Works
 
-- complete beginners — zero coding knowledge needed
-- people with ideas who don't know where to start
-- anyone curious about building with ai but hasn't tried it yet
+- **Identity votes:** every completed habit is a vote for the person you want to become.
+- **Habit stacking:** attach a new habit to an existing routine to reduce friction.
+- **Two-Minute Rule:** define the smallest version of a habit so consistency wins.
+- **Streak logic:** “never miss twice” helps recover fast instead of falling off.
 
-## quick setup
+## ✨ Key Features
 
-### mac
+- Multi-step onboarding with habit scorecard and identity selection
+- Identity-based habit creation flow with implementation intention
+- Two-Minute Rule habit design (start tiny, scale later)
+- Build-habit and break-habit wizards based on the Four Laws
+- Never Miss Twice streak logic and bounce-back prompts
+- Hold-to-complete interactions and daily insight cards
+- Weekly reflection workflow with confidence scoring and decisions
+- Progress dashboard with identity votes, streak calendar, and growth curve
+- Hall of Fame for mastered habits
+- Local persistence via `localStorage` (your data survives refresh)
 
-open Terminal and paste:
+## 🛠️ Built With
+
+- Next.js (App Router)
+- React + TypeScript
+- HeroUI
+- Tailwind CSS v4
+- Framer Motion
+- React Router (in-app navigation flow)
+- Vercel Speed Insights
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 20+
+- npm
+
+### Install
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/filip-pilar/makesomething/main/scripts/setup-mac.sh)
+npm install
 ```
 
-### windows
+### Run locally
 
-open PowerShell and paste:
-
-```powershell
-irm https://raw.githubusercontent.com/filip-pilar/makesomething/main/scripts/setup-windows.ps1 | iex
+```bash
+npm run dev
 ```
 
-## resume
+Open `http://localhost:3000`.
 
-already set up? open the **make-something** folder on your Desktop and double-click:
+## 📄 License
 
-- **mac:** `run.command`
-- **windows:** `run.bat`
-
-## how it works
-
-once you're set up, the ai agent guides the whole thing. you talk to it in plain english — no code, no jargon.
-
-| command | what it does |
-|---------|-------------|
-| `$start` | brainstorm an idea and start building |
-| `$imlost` | get unstuck when you're confused |
-| `$fixit` | fix problems automatically |
-| `$deploy` | put your app on the internet with a shareable link |
-
-you describe what you want, the agent builds it, and you see it live in your browser. one feature at a time, until you've got something real you can share.
-
-## what's in the box
-
-this repo comes pre-loaded with:
-
-- [Next.js](https://nextjs.org) — framework
-- [HeroUI](https://heroui.com) — component library (buttons, cards, inputs, navbars, etc.)
-- [Tailwind CSS](https://tailwindcss.com) — styling
-- [Framer Motion](https://motion.dev) — animations
-- [Codex CLI](https://github.com/openai/codex) — the ai agent that builds with you
-
-you don't need to know what any of these are. the agent handles it all.
-
-## livestream attendees
-
-if you joined from a livestream, check the google doc shared during the stream for step-by-step instructions. otherwise, follow the quick setup above.
+MIT

@@ -1,0 +1,882 @@
+[00:00:01.590] Server  LOG     ✓ Ready in 1410ms
+[00:00:17.682] Server  LOG     ○ Compiling / ...
+[00:00:24.427] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:25.624] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="light" suppressHydrationWarning={true}>
+                          <body
+                            className="__variable_188709 __variable_9a8899 __variable_73ee6c __variable_dd5b2f __varia..."
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+                          >
+                  ...
+
+[02:18:38.978] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[02:18:38.978] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[02:18:43.628] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:18:58.807] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:19:03.619] Server  ERROR   ⨯ ./app/page.tsx
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+
+Import trace for requested module:
+./app/page.tsx
+[02:19:03.720] Browser ERROR   ./app/page.tsx
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+
+Import trace for requested module:
+./app/page.tsx
+[02:19:08.257] Server  ERROR   ⨯ ./app/page.tsx
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+
+Import trace for requested module:
+./app/page.tsx
+[02:19:08.439] Browser ERROR   ./app/page.tsx
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+
+Import trace for requested module:
+./app/page.tsx
+[02:19:08.699] Server  LOG     ○ Compiling /_error ...
+[02:19:09.069] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+
+[02:19:09.710] Browser ERROR   ./app/page.tsx
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+[02:19:23.219] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+
+[02:19:24.715] Browser ERROR   ./app/page.tsx
+Error:   × `ssr: false` is not allowed with `next/dynamic` in Server Components. Please move it into a Client Component.
+   ╭─[/Users/pennead/Documents/make-something/app/page.tsx:3:1]
+ 1 │     import dynamic from "next/dynamic";
+ 2 │     
+ 3 │ ╭─▶ const OnePercentBetterApp = dynamic(
+ 4 │ │     () => import("./_one-percent-better/AppRoot").then((mod) => mod.OnePercentBetterApp),
+ 5 │ │     { ssr: false },
+ 6 │ ╰─▶ );
+ 7 │     
+ 8 │     export default function Home() {
+ 9 │       return <OnePercentBetterApp />;
+   ╰────
+[02:19:27.572] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:19:27.882] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:19:29.032] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:19:30.411] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[02:19:31.545] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:27:51.372] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:28:06.434] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:28:06.716] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/today" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="light" suppressHydrationWarning={true}>
+                          <body
+                            className="__variable_188709 __variable_9a8899 __variable_73ee6c __variable_dd5b2f __varia..."
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+                          >
+                  ...
+
+[02:28:50.306] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:28:56.151] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:28:56.361] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+%s%s https://react.dev/link/hydration-mismatch 
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="light" suppressHydrationWarning={true}>
+                          <body
+                            className="__variable_188709 __variable_9a8899 __variable_73ee6c __variable_dd5b2f __varia..."
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+                          >
+                  ...
+
+[02:28:56.361] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[02:28:56.361] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[02:32:50.554] Server  ERROR   ⨯ ./app/_one-percent-better/screens/OnboardingScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/OnboardingScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/OnboardingScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:32:50.710] Browser ERROR   ./app/_one-percent-better/screens/OnboardingScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/OnboardingScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/OnboardingScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:32:51.662] Server  ERROR   ⨯ ./app/_one-percent-better/screens/OnboardingScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/OnboardingScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/OnboardingScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:32:51.711] Browser ERROR   ./app/_one-percent-better/screens/OnboardingScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/OnboardingScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/OnboardingScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:33:41.711] Browser ERROR   ./app/_one-percent-better/screens/OnboardingScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/OnboardingScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/OnboardingScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:38:36.491] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:38:36.661] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+            <Home params={Promise} searchParams={Promise}>
+              <OnePercentBetterApp>
+                <AppStateProvider>
+                  <MemoryRouter initialEntries={[...]}>
+                    <Router basename={undefined} location={{pathname:"...", ...}} navigationType="POP" ...>
+                      <AppShell>
++                       <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                       <section className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10">
+        ...
+      ...
+
+[02:38:36.661] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[02:38:36.661] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[02:42:11.511] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:42:11.774] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <RootLayout>
+                        <html lang="en" className="light" suppressHydrationWarning={true}>
+                          <body
+                            className="__variable_188709 __variable_9a8899 __variable_73ee6c __variable_dd5b2f __varia..."
+-                           data-new-gr-c-s-check-loaded="14.1275.0"
+-                           data-gr-ext-installed=""
+                          >
+                            ...
+                              <AppShell>
++                               <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                               <section
+-                                 className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10"
+-                               >
+                  ...
+
+[02:42:11.774] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[02:42:11.774] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[02:44:47.408] Server  ERROR   ⨯ ./app/_one-percent-better/screens/TodayScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/TodayScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/TodayScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:44:47.714] Browser ERROR   ./app/_one-percent-better/screens/TodayScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/TodayScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/TodayScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:44:48.704] Server  ERROR   ⨯ ./app/_one-percent-better/screens/TodayScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/TodayScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/TodayScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:44:48.709] Browser ERROR   ./app/_one-percent-better/screens/TodayScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/TodayScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/TodayScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:45:45.682] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:45:46.711] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+            <Home params={Promise} searchParams={Promise}>
+              <OnePercentBetterApp>
+                <AppStateProvider>
+                  <MemoryRouter initialEntries={[...]}>
+                    <Router basename={undefined} location={{pathname:"...", ...}} navigationType="POP" ...>
+                      <AppShell>
++                       <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                       <section className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10">
+        ...
+      ...
+
+[02:45:46.711] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[02:45:46.711] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[02:50:34.442] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[02:50:34.630] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+            <Home params={Promise} searchParams={Promise}>
+              <OnePercentBetterApp>
+                <AppStateProvider>
+                  <MemoryRouter initialEntries={[...]}>
+                    <Router basename={undefined} location={{pathname:"...", ...}} navigationType="POP" ...>
+                      <AppShell>
++                       <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                       <section className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10">
+        ...
+      ...
+
+[02:50:34.630] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[02:50:34.630] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[02:58:48.779] Server  ERROR   ⨯ ./app/_one-percent-better/screens/ProgressScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/ProgressScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/ProgressScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:58:49.712] Browser ERROR   ./app/_one-percent-better/screens/ProgressScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/ProgressScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/ProgressScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:58:50.000] Server  ERROR   ⨯ ./app/_one-percent-better/screens/ProgressScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/ProgressScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/ProgressScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:58:50.712] Browser ERROR   ./app/_one-percent-better/screens/ProgressScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/ProgressScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/ProgressScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[02:59:40.712] Browser ERROR   ./app/_one-percent-better/screens/ProgressScreen.tsx
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/screens/ProgressScreen.tsx
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/screens/ProgressScreen.tsx
+./app/_one-percent-better/AppShell.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:10:50.132] Server  ERROR   ⨯ ./app/_one-percent-better/state/reducer.ts
+Error:   × Expression expected
+     ╭─[/Users/pennead/Documents/make-something/app/_one-percent-better/state/reducer.ts:156:1]
+ 153 │       };
+ 154 │       }
+ 155 │ 
+ 156 │     case "set_reflections":
+     ·     ────
+ 157 │       return {
+ 158 │         ...state,
+ 159 │         reflections: action.payload,
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/_one-percent-better/state/reducer.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:10:50.711] Browser ERROR   ./app/_one-percent-better/state/reducer.ts
+Error:   × Expression expected
+     ╭─[/Users/pennead/Documents/make-something/app/_one-percent-better/state/reducer.ts:156:1]
+ 153 │       };
+ 154 │       }
+ 155 │ 
+ 156 │     case "set_reflections":
+     ·     ────
+ 157 │       return {
+ 158 │         ...state,
+ 159 │         reflections: action.payload,
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/_one-percent-better/state/reducer.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:10:51.983] Server  ERROR   ⨯ ./app/_one-percent-better/state/reducer.ts
+Error:   × Expression expected
+     ╭─[/Users/pennead/Documents/make-something/app/_one-percent-better/state/reducer.ts:156:1]
+ 153 │       };
+ 154 │       }
+ 155 │ 
+ 156 │     case "set_reflections":
+     ·     ────
+ 157 │       return {
+ 158 │         ...state,
+ 159 │         reflections: action.payload,
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/_one-percent-better/state/reducer.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:10:52.710] Browser ERROR   ./app/_one-percent-better/state/reducer.ts
+Error:   × Expression expected
+     ╭─[/Users/pennead/Documents/make-something/app/_one-percent-better/state/reducer.ts:156:1]
+ 153 │       };
+ 154 │       }
+ 155 │ 
+ 156 │     case "set_reflections":
+     ·     ────
+ 157 │       return {
+ 158 │         ...state,
+ 159 │         reflections: action.payload,
+     ╰────
+
+Caused by:
+    Syntax Error
+
+Import trace for requested module:
+./app/_one-percent-better/state/reducer.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:11:24.533] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:11:25.327] Server  ERROR   ⨯ ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:11:25.718] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+            <Home params={Promise} searchParams={Promise}>
+              <OnePercentBetterApp>
+                <AppStateProvider>
+                  <MemoryRouter initialEntries={[...]}>
+                    <Router basename={undefined} location={{pathname:"...", ...}} navigationType="POP" ...>
+                      <AppShell>
++                       <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                       <section className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10">
+        ...
+      ...
+
+[03:11:25.718] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[03:11:25.718] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[03:11:25.718] Browser ERROR   ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:11:27.408] Server  ERROR   ⨯ ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:11:27.713] Browser ERROR   ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:12:09.407] Browser ERROR   uncaughtError: ModuleBuildError: Module build failed (from ./node_modules/next/dist/build/webpack/loaders/next-swc-loader.js):
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+[03:12:14.825] Server  WARN    ⚠ Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+[03:12:17.558] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:12:18.719] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+            <Home params={Promise} searchParams={Promise}>
+              <OnePercentBetterApp>
+                <AppStateProvider>
+                  <MemoryRouter initialEntries={[...]}>
+                    <Router basename={undefined} location={{pathname:"...", ...}} navigationType="POP" ...>
+                      <AppShell>
++                       <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                       <section className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10">
+        ...
+      ...
+
+[03:12:18.719] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[03:12:18.719] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[03:14:23.277] Server  ERROR   ⨯ ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:14:23.711] Browser ERROR   ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:14:26.101] Server  ERROR   ⨯ ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:14:26.711] Browser ERROR   ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:15:06.711] Browser ERROR   ./app/_one-percent-better/state/storage.ts
+Error: 
+
+Caused by:
+    0: Failed to read source code from /Users/pennead/Documents/make-something/app/_one-percent-better/state/storage.ts
+    1: No such file or directory (os error 2)
+
+Import trace for requested module:
+./app/_one-percent-better/state/storage.ts
+./app/_one-percent-better/state/context.tsx
+./app/_one-percent-better/AppRoot.tsx
+./app/page.tsx
+[03:15:24.715] Browser ERROR   The final argument passed to %s changed size between renders. The order and size of this array must remain constant.
+
+Previous: %s
+Incoming: %s useEffect [] [, function () { [native code] }]
+[03:36:24.930] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:36:25.138] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+            <Home params={Promise} searchParams={Promise}>
+              <OnePercentBetterApp>
+                <AppStateProvider>
+                  <MemoryRouter initialEntries={[...]}>
+                    <Router basename={undefined} location={{pathname:"...", ...}} navigationType="POP" ...>
+                      <AppShell>
++                       <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                       <section className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10">
+        ...
+      ...
+
+[03:36:25.138] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[03:36:25.138] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[03:45:48.074] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[03:45:48.392] Browser ERROR   uncaughtError: Error: Hydration failed because the server rendered HTML didn't match the client. As a result this tree will be regenerated on the client. This can happen if a SSR-ed Client Component used:
+
+- A server/client branch `if (typeof window !== 'undefined')`.
+- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
+- Date formatting in a user's locale which doesn't match the server.
+- External changing data without sending a snapshot of it along with the HTML.
+- Invalid HTML tag nesting.
+
+It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
+
+https://react.dev/link/hydration-mismatch
+
+  ...
+    <RedirectErrorBoundary router={{...}}>
+      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{rsc:<Fragment>, ...}} segmentPath={[...]} ...>
+        <SegmentViewNode type="page" pagePath="page.tsx">
+          <SegmentTrieNode>
+          <ClientPageRoot Component={function Home} serverProvidedParams={{...}}>
+            <Home params={Promise} searchParams={Promise}>
+              <OnePercentBetterApp>
+                <AppStateProvider>
+                  <MemoryRouter initialEntries={[...]}>
+                    <Router basename={undefined} location={{pathname:"...", ...}} navigationType="POP" ...>
+                      <AppShell>
++                       <div className="min-h-screen bg-[#f7f4ee] text-zinc-900">
+-                       <section className="relative flex min-h-screen flex-col bg-[#f8f4ec] px-6 pb-10 pt-14 sm:px-10">
+        ...
+      ...
+
+[03:45:48.392] Browser WARN    ⚠️ React Router Future Flag Warning: React Router will begin wrapping state updates in `React.startTransition` in v7. You can use the `v7_startTransition` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_starttransition.
+[03:45:48.392] Browser WARN    ⚠️ React Router Future Flag Warning: Relative route resolution within Splat routes is changing in v7. You can use the `v7_relativeSplatPath` future flag to opt-in early. For more information, see https://reactrouter.com/v6/upgrading/future#v7_relativesplatpath.
+[04:07:00.713] Browser LOG     %c[Vercel Speed Insights]%c Debug mode is enabled by default in development. No requests will be sent to the server. color: rgb(120, 120, 120) color: inherit
